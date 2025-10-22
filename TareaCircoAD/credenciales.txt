@@ -1,0 +1,5 @@
+1|fari|FARI|fari@gmail.com|Fari|Emiratos Árabes Unidos|coordinacion
+2|luis|LUIS|luis@g.es|luis|Holanda|artista
+3|hola|hola|go@hey.com|hola|Argentina|artista
+4|fariuno|FARIUNO|KLK@GMAIL.KLK|KLK|Turquía|artista
+5|holaklk|HOLA_KLK|HOLA@GMAIL.COM|hola|Holanda|coordinacion
