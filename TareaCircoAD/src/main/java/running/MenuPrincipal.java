@@ -213,7 +213,8 @@ public class MenuPrincipal {
         try {
             switch (opcion) {
                 case 2:
-                    gestionEspectaculo.crearEspectaculo(Perfil.ADMIN, 0);
+                	long idCoordinador =  gestionSesion.getSesion().getPersona().getId();
+                    gestionEspectaculo.crearEspectaculo(Perfil.CORDINACION, idCoordinador);
                     break;
                     
                 case 3:

@@ -259,15 +259,15 @@ public class FicherosUtils {
 		List<String[]> credenciales = leerCredenciales();
 
 		for (String[] credencial : credenciales) {
-			try {
-				int id = Integer.parseInt(credencial[0]);
-				if (id == idPersona) {
-					return credencial[4]; // nombre_persona
-				}
-			} catch (NumberFormatException e) {
-				// Ignorar líneas con ID inválido
-			}
-		}
+	        try {
+	            long id = Long.parseLong(credencial[0]); 
+	            if (id == idPersona) {
+	                return credencial[4]; 
+	            }
+	        } catch (NumberFormatException e) {
+	            // Ignorar líneas con ID inválido
+	        }
+	    }
 
 		return null;
 	}

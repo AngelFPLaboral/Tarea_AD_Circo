@@ -104,7 +104,6 @@ public class GestionEspectaculo {
 			} while (!fechasValidas);
 
 			System.out.println("-- Coordinador Responsable ---");
-			System.out.println(perfilActual);
 			if (perfilActual == Perfil.CORDINACION) {
 				
 				idCoordinador = idUsuarioActual;
