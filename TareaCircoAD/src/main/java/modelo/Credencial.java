@@ -1,22 +1,23 @@
 package modelo;
 
 public class Credencial {
-	//VARIABLES
+	// VARIABLES
 	private String nombreUsuario;
 	private String contraseña;
 	private Perfil perfil;
-	
-	//CONTRUCTORES
-	
+
+	// CONTRUCTORES
+
 	/**
 	 * Metodo Default
 	 */
 	public Credencial() {
 		super();
 	}
-	
+
 	/**
 	 * Metodo parametrizado con todos los atributos/variables
+	 * 
 	 * @param nombreUsuario
 	 * @param contraseña
 	 * @param perfil
@@ -53,11 +54,10 @@ public class Credencial {
 		this.perfil = perfil;
 	}
 
-	
-	//METODOS
+	// METODOS
 	public boolean verificar(String usuario, String contraseña) {
-		return this.nombreUsuario.equals(usuario) && this.contraseña.equals(contraseña);		
+		return this.nombreUsuario.equals(usuario) && this.contraseña.equals(contraseña);
 	}
-	
-	//HACER EL toSting:
+
+	//!!!HACER EL toString
 }

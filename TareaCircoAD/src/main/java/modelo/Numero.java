@@ -3,24 +3,25 @@ package modelo;
 import java.util.List;
 
 public class Numero {
-	//VARIABLES
+	// VARIABLES
 	private long id;
 	private String nombre;
 	private int orden;
 	private double duracion;
 	private List<Artista> artistas;
-	
-	//CONSTRUCTORES
-	
+
+	// CONSTRUCTORES
+
 	/**
 	 * Construtor Default
 	 */
 	public Numero() {
 		super();
 	}
-	
+
 	/**
 	 * Constructor parametrizado con todos las variables
+	 * 
 	 * @param id
 	 * @param nombre
 	 * @param orden
@@ -36,7 +37,7 @@ public class Numero {
 		this.artistas = artistas;
 	}
 
-	//GETTERS Y SETTERS
+	// GETTERS Y SETTERS
 	public long getId() {
 		return id;
 	}
@@ -77,7 +78,7 @@ public class Numero {
 		this.artistas = artistas;
 	}
 
-	//METODOS
-	
-	//HACER EL ToString
+	// METODOS
+
+	// !!! HACER EL ToString
 }

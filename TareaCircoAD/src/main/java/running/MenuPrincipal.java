@@ -28,10 +28,12 @@ public class MenuPrincipal {
         
         while (!salir) {
             // Mostrar el menú según el estado de autenticación
-            if (gestionSesion.haySesionActiva()) {
-                salir = mostrarMenuSesionActiva();
-            } else {
+        	Perfil perfilActual = gestionSesion.getPerfilActual();
+            
+            if (perfilActual == Perfil.INVITADO) {
                 salir = mostrarMenuInvitado();
+            } else {
+                salir = mostrarMenuSesionActiva();
             }
         }
         System.out.println("¡Hasta pronto!");
@@ -189,11 +191,11 @@ public class MenuPrincipal {
                     break;
                     
                 case 3:
-                    gestionEspectaculo.crearEspectaculo();
+                    gestionEspectaculo.crearEspectaculo(Perfil.ADMIN, 0);
                     break;
                     
                 case 4:
-                    System.out.println("Alerta: Esta funcionalidad todavia no ha sido pedida, futuras entregas");
+                    System.out.println("AVISO: Esta funcionalidad todavia no ha sido pedida, futuras entregas");
                     break;
                     
                 default:
@@ -211,11 +213,11 @@ public class MenuPrincipal {
         try {
             switch (opcion) {
                 case 2:
-                    gestionEspectaculo.crearEspectaculo();
+                    gestionEspectaculo.crearEspectaculo(Perfil.ADMIN, 0);
                     break;
                     
                 case 3:
-                    System.out.println("Alerta: Esta funcionalidad todavia no ha sido pedida, futuras entregas");
+                    System.out.println("AVISO: Esta funcionalidad todavia no ha sido pedida, futuras entregas");
                     break;
                     
                 default:
@@ -234,7 +236,7 @@ public class MenuPrincipal {
             switch (opcion) {
                 case 2:
                 case 3:
-                    System.out.println("Alerta: Esta funcionalidad todavia no ha sido pedida, futuras entregas");
+                    System.out.println("AVISO: Esta funcionalidad todavia no ha sido pedida, futuras entregas");
                     break;
                     
                 default:
@@ -249,16 +251,16 @@ public class MenuPrincipal {
     
 
     private void realizarLogin() {
-        System.out.println("\n=== INICIAR SESIÓN ===\n");
+        System.out.println("=== INICIAR SESION ===");
         
         System.out.print("Nombre de usuario: ");
-        String usuario = sc.nextLine().trim();
+        String usuarioCredencial = sc.nextLine().trim();
         
         System.out.print("Contraseña: ");
-        String password = sc.nextLine().trim();
+        String contraseña = sc.nextLine().trim();
         
         // Intentar autenticar
-        gestionSesion.login(usuario, password);
+        gestionSesion.login(usuarioCredencial, contraseña);
     }
     
     /**

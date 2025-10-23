@@ -2,29 +2,30 @@ package modelo;
 
 import java.io.Serializable;
 
-public class Persona implements Serializable{
+public class Persona implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	//Variables:
-	private long id; //Tuve un problema y es que este dato lo puse como id al inciar el proyecto y luego lo cambie, creo que no afecta igualmente pq en java un long si que puede contener a un int por la escala de tipos numéricos primitivos
+	// Variables:
+	private long id; // Tuve un problema y es que este dato lo puse como id al inciar el proyecto y luego lo cambie, creo que no afecta igualmente pq en java un long si que puede contener a un int por la escala de tipos numéricos primitivos
 	private String nombre;
 	private String email;
 	private String nacionalidad;
 	private Credencial credencial;
-	
-	//Constructores:
-	
+
+	// Constructores:
+
 	/**
 	 * Constructor default
 	 */
 	public Persona() {
-		
+
 	}
 
 	/**
 	 * Constructor con todos las Variables
+	 * 
 	 * @param id
 	 * @param nombre
 	 * @param email
@@ -39,7 +40,7 @@ public class Persona implements Serializable{
 		this.nacionalidad = nacionalidad;
 	}
 
-	//Get && Set
+	// Get && Set
 	public long getId() {
 		return id;
 	}
@@ -79,20 +80,16 @@ public class Persona implements Serializable{
 	public void setCredencial(Credencial credencial) {
 		this.credencial = credencial;
 	}
-	
-	//Metodos
+
+	// Metodos
 	/**
-	 * Metodo para ver datos exactos de una persona 
-	 * No pondra datos de las clases hij@s
+	 * Metodo para ver datos exactos de una persona No pondra datos de las clases
+	 * hij@s
 	 */
 	@Override
-	public String toString(){
-		return "-> Persona:"+
-	"/n - Id Persona: "+id+
-	"/n - Nombre: "+nombre+
-	"/n - Email: "+email+
-	"/n - Nacionalidad: "+nacionalidad
-	;
+	public String toString() {
+		return "-> Persona:" + "/n - Id Persona: " + id + "/n - Nombre: " + nombre + "/n - Email: " + email
+				+ "/n - Nacionalidad: " + nacionalidad;
 	}
-	
+
 }
